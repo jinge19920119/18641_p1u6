@@ -1,0 +1,7 @@
+1. In unit 4, I was told that:
+
+Your should handle different number of options in each optionset instead of hardcode. (-1)
+
+But I have examined my code, but couldn't find where exists hardcode of numbers of option that you says. I don't use this except in Automobile class, but in this class I always use the method, size(), to get that number without hardcode. I don't think that is hardcode. 
+
+This is what I am confused and I think it should not be deducted.

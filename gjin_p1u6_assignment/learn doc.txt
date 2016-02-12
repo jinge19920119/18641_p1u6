@@ -1,0 +1,123 @@
+Learn doc of mini 1.    
+
+Name: Ge Jin.  andrew id: gjin
+
+reflection of unit 1: 
+
+1. containment means using objects of other classes in one class ,while encapsulation means the access to one class is limited. Containment can be achieved through making properties to be types of other classes. Encapsulation can be achieved by many ways, such as stating as private, making it to be inner class or so.
+
+2. create a set of classes and find patterns in structuring information. 
+
+3. not to use undefined constant numbers, use ‘final’ to state them. not use specific input states to define methods, analyze the variables needed and define methods.
+
+4. write comments for functions and code that are hard to understand
+
+5. reading data in a single pass could only get a set of chars, it could be convenient in some cases but needs redundant steps like combining them if we need some strings in other cases. 
+
+6. Serialization can make it easy to write objects directly to files, instead of storing it separately. Inner class should not be serializable as it can’t be accessed outside.
+
+7. encapsulation: do not want guests or users to use some classes directly and see their codes.
+   association: it can be used widely and is mainly used when passing parameters.
+   containment: when we need to define some properties of another type
+   inheritance: when several classes all have some common properties or methods, they can inherit from one class of these common ones.
+   polymorphism: when one function have different parameters to pass by.
+
+8. Just contain an object of its class in its field.
+
+reflection of unit 2:
+
+1. interface will tell the users what methods are defined in the project without looking at the code directly
+
+2. making it an abstract class and can be extended. create a interface and make it implemented. 
+
+3. Each interface can be concise . Users can see clearly of which methods to use.
+
+4. it is extensible and the core classes can be hidden from the outside
+
+5. create a custom exception class extended from Exception class, and define some fix methods in it.
+
+6. self-healing. after meeting the particular exception, it can be fixed by itself
+
+7. it can be shared between objects only if it is stated static
+
+8. advantage: it is convenient to use this property, and one OptionSet object can only have one choice. What’s more, after deleting one OptionSet, the choice is deleted as well.
+   
+   get method, that can call the getChoice method in OptionSet using index in Auto class
+
+9. just creating a static LinkedHashMap in Fleet class, then we can do CRUD operation for each Auto object here.
+
+reflection of unit 3: 
+
+1. state synchronized for CRUD methods to make only one Automobile object can access one method at one time
+
+2. The one is state methods ‘synchronized’ as it can make it thread-safe. The other one is to make one object synchronized and this object can’t be accessed by multiple threads.
+
+3. update optionSet names continuously, for example ‘color’ to ‘color1’, ‘color1’ to ‘color2’, ‘color2’ to ‘color3’ and so on. Only if nothing wrong has happened, it can be proved that synchronization works. Or synchronization doesn’t work.
+
+concepts learned from unit 1 — - unit 3: 
+
+1. learn how to use java language to describe a sophisticated system with many levels of attributes and values. We can use many concepts in it, such as containment, association, encapsulation, inheritance and polymorphism. What’s more, inner class can also be used to form a special relationship. 
+
+2. There are some differences between try/catch and if/else clause. Try/catch is used to deal with runtime exceptions, while if/else deals with those that we have already known before. 
+
+3. Class is a blue print that contains genetic code for human. While object can be made using a class, that is a self-contained and independent entity. 
+
+4. There are two kinds of methods, static and non-static. There are also two kinds of variables, static variables and instance variables. Static methods can only call static data, and would better not call instance variables. While non-static methods can call both.
+
+5. While we state ‘import test.*’, this can allow us to use methods in test package. But if we want to use classes in sub package of test, we need to change ‘*’ to the exact name of the sub package or subclass. 
+
+6. lean how to read from files. There are 4 kinds of IO, streams(connect a file to a program), buffers(use small pieces of memory), filters(refer to data type conversion) and object IO(read and write object of one class) . Object IO can be also stated as serialization and deserialization.
+
+7. learn how to get and set values, find, delete and update.
+
+8. When we use try/catch block in java language, we need to deal with all kinds of exception we may meet in try block. 
+
+9. learn to use new data structures, like ArrayList and LinkedHashMap. ArrayList is a dynamic array, which can insert or delete without copy. LinkedHashMap is a data structure mixed with LinkedList and HashMap, that store each pair using HashMap and make them connected through a LinkedList.
+
+10. use empty class extended from father classes to realize encapsulation, or data access limitation.
+
+11. learn how to write exception class that can be thrown.What’s more, writing helper methods in the exception class to fix the problem.
+
+12. Abstract class can’t be initialized. But it can contains static methods. An interface can also have static methods. 
+
+13. About interface: 1. a surface forming a common boundary of two bodies, spaces or phases.
+    2. the place at which independent and often unrelated systems meet and act on or communicate with each other.
+
+14. If we want to use the methods stated in the interface, we need to implement that in one class and execute this method. But we can execute those in another abstract class, and make our class to extend this to make it invisible to users.
+
+15. Interface can extend other interfaces, and only interfaces. One class can only extend one abstract class, but can implement many interfaces. 
+
+16. The variables and fields in outer class can be accessed in inner class, but not in the opposite. 
+
+17. If p is a object of Program class and it has been initialized, we can initialize an inner class object ic by: Program.InnerClass ic= p.new InnerClass(). This tells us that we can only access the inner class through the outer class object. 
+
+18. We can create an exception class with an errorNo field of type int and an errorMsg field of type String. Then when we want to show or deal with this error, we can initialize with these arguments and throw it. 
+
+19. learn how to make threads safe that methods and objects can be accessed at the same without data corruption. There are two ways, one is method synchronization and the other is object synchronization.
+
+
+lessons learned from unit 4 - - unit 6 :
+
+1. learn how to write a client and a server, that they can be connected through a port number and IP address. Data can be conveyed between them using objectIO.
+
+2. One client can only be accessed to one server, so it should be stated as synchronized to make it thread-safe.
+
+3. Two fields are included in a socket object, IP address and port number. IP address differs from different network environment, so getLocalHost and getHostAddress method should be used in it.
+
+4. After one socket has been initiated, it has to be closed. So does objectInputStream or objectOutputStream objects. 
+
+5. After the connection has been built from client and server, they can communicate through objectStream to send objects.
+
+6. After the object has been received, we can use getClass method to know if it’s the object that we want. 
+
+7. Except reading from plain text file and convert each line to a string, we can also read from a properties file and load it into a HashMap to read it. 
+
+8. A servlet can be used to create a web page, scan and edit data on it. And we can create  a Servlet class in java to use this interface. 
+
+8. learn how to write servlet and java server pages using java language, and how to set the content of web pages. 
+
+9. learn how to use the java server pages to interact with client, and get data. 
+
+10. In doGet or doPost method, when we want to convey or receive some data, we always deal with the request or response variables.
+
+11. As sending and receiving data between client and server, we always use ObjectStream to do this. While for servlet and JSP, we need to create an object of RequestDispatcher and use this to forward data to another servlet or JSP. 

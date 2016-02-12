@@ -1,0 +1,28 @@
+DROP DATABASE carconfig;
+CREATE DATABASE carconfig;
+use carconfig;
+
+CREATE TABLE automobile(
+    id int not NULL AUTO_INCREMENT PRIMARY KEY, 
+    name VARCHAR(255),
+    base_price float
+);
+
+CREATE TABLE optionset(
+    id int not NULL AUTO_INCREMENT PRIMARY KEY, 
+    name VARCHAR(255),
+    auto_id int not NULL,
+    FOREIGN KEY (auto_id) 
+    REFERENCES automobile(id)
+    ON DELETE CASCADE
+);
+
+CREATE TABLE options(
+    id int not NULL AUTO_INCREMENT PRIMARY KEY, 
+    name VARCHAR(255),
+    price float,
+    option_id int,
+    FOREIGN KEY(option_id)
+    REFERENCES optionset(id)
+    ON DELETE CASCADE
+);
